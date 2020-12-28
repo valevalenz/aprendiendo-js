@@ -1,0 +1,44 @@
+<!-- Desafío 3: Crear un archivo denominado menu-top.html con un menú que pueda
+colapsar, ocupando un link y otro que restaure su posición original (No es necesario
+esconder el link de mostrar). -->
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <title> Desafio 3 - para esto usamos lo aprendido en el ejemplo 4 pero aquí nos dan el código de la clase </title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css">
+
+</head>
+
+<style>
+  nav {
+    height: 70px;
+    background-color: black;
+    color: white;
+    padding: 0px;
+    line-height: 70px;
+    padding-left: 20px;
+  }
+
+  nav.hide{
+    display: none;
+  }
+
+</style>
+
+<body>
+
+  <nav id="nav">
+      <a onclick= "document.getElementById('nav').classList.add('hide')"> Esconder </a>
+  </nav>
+      <a onclick= "document.getElementById('nav').classList.toggle('hide')"> Mostrar </a>
+
+</body>
+
+</html>
+
+<!-- Alternativa con Toggle: el ejercicio está mal planteado ya que la respuesta correcta según las soluciones es con classList.add() en el link Esconder
+
+Para que esto funcione el botón que clickeamos tiene que estar fuera del nav, de lo contrario se va a esconder junto al nav y nos quedaremos sin nada que clickear
+ -->

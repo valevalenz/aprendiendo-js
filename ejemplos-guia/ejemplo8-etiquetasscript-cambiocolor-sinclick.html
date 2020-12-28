@@ -1,0 +1,29 @@
+<!-- seguimos el mismo proceso anterior: identificar con ID, definir evento, ejecutar -->
+
+<!DOCTYPE html>
+<html lang= "es">
+<head>
+<title> Cambio color caja </title>
+<style>
+
+#box {
+width : 170px;
+height : 170px;
+background-color : red;
+}
+
+</style>
+</head>
+<body id= "body">
+<div id= "box"></div>
+  <script>
+var box = document.getElementById('box');
+    box.style.backgroundColor = "green"; //no usamos EventListener porque no estamos clickeando, se cambia directamente al cargar
+  </script>
+</body>
+</html>
+
+<!-- INVESTIGAR:
+utilizando las propiedades del HTML DOM Style Object, en donde el objeto Style representa
+una declaración de estilo individual, procederemos a modificar el estilo del color de fondo
+del elemento, originalmente se encuentra en rojo, https://www.w3schools.com/jsref/dom_obj_style.asp  -->

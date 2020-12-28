@@ -1,0 +1,55 @@
+<!-- EJERCICIO: -->
+
+<!-- implementar los eventos “click”, mediante la función “addEventListener” -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title> Ejemplo 8 - click - eventListener </title>
+</head>
+
+<body>
+  <!-- Paso 1:
+  Modifica la etiqueta <p> en el HTML, agregando un id con nombre “elementoP”, por ejemplo. -->
+  <p id="elementoP"> Este párrafo fue identificado con el ID "elementoP" </p>
+
+-->
+
+  <script>
+    // Paso 2:
+    // Luego, dentro de las etiquetas <script>, procederemos a leer el elemento por su id mediante
+    // el método “getElementById” guardando el resultado en una variable, quedando el código de
+    // la siguiente manera:
+
+    var parrafo = document.getElementById('elementoP');
+
+    // Paso 3:
+    // Ya que tenemos el elemento guardado, procedemos a agregarle el escucha para que ejecute una función cuando el evento que deseamos escuchar, en este caso el “click” lo active el usuario y muestre una ventana de alerta con el mensaje: “Mensaje desde JS activado por evento click”.
+
+    parrafo.addEventListener('click', function() {
+      alert("Mensaje desde JS activado por evento click")
+    });
+
+
+  </script>
+
+</body>
+
+</html>
+
+<!-- Si el usuario hace clic en un botón en una página web, es posible
+que deseemos responder a esa acción mostrando una ventana emergente o modificando un
+texto. Por consiguiente, los eventos se envían para notificar al código en JavaScript que algo
+ha ocurrido.
+
+Los eventos más comunes son los de dispositivo de entrada, como el “click, que utilizamos en los primeros desafíos.
+
+DISPOSITIVO DE ENTRADA: Los dispositivos de entrada son los introducen los datos a la computadora para que el requerimiento sea procesado, por ejemplo, el mouse o el teclado.
+
+DOM = Document Object Model
+https://developer.mozilla.org/es/docs/Referencia_DOM_de_Gecko/Introducci%C3%B3n
+
+El modelo de objeto de documento (DOM) es una interfaz de programación para los documentos HTML y XML. Facilita una representación estructurada del documento y define de qué manera los programas pueden acceder, al fin de modificar, tanto su estructura, estilo y contenido. El DOM da una representación del documento como un grupo de nodos y objetos estructurados que tienen propiedades y métodos. Esencialmente, conecta las páginas web a scripts o lenguajes de programación.
+
+ -->

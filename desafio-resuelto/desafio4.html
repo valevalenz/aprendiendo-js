@@ -1,0 +1,47 @@
+<!-- Desafío 4: Crear un archivo con el nombre de menu-top-v2.html , este debe ser
+creado como una copia del desafío anterior donde adicional a los requerimientos
+realizados se debe mostrar nuevamente el menú en el caso que se encuentre oculto. -->
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+  <title> Desafío 4 </title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css"> <!-- esto es un reset-->
+
+</head>
+
+<style>
+
+  nav {
+    height: 70px;
+    background-color: black;
+    color: white;
+    padding: 0px;
+    line-height: 70px;
+    padding-left: 20px;
+  }
+
+  nav.hide{
+    display: none;
+  }
+
+</style>
+
+<body>
+
+  <nav id="nav">
+     <a onclick= "document.getElementById('nav').classList.add('hide')"> Esconder </a>
+  </nav>
+
+  <a onclick= "document.getElementById('nav').classList.remove('hide')"> Mostrar </a>
+</body>
+
+</html>
+
+<!-- En este ejercicio usar toogle no sería tan correcto aunque se llega a la solución, ya que nos piden aprovechar el código que nos entrega el ejercicio
+
+Documentación classList.remove(): https://www.w3schools.com/howto/howto_js_remove_class.asp
+
+-->

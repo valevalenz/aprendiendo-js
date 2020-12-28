@@ -1,0 +1,18 @@
+<!-- Desafío 1: Crear un nuevo archivo a partir de lo anteriormente aprendido. Este
+archivo se debe llamar cambiando-elemento-distinto-v2.html y debes hacer
+que al hacer click al segundo párrafo el cuarto cambie a color azul y al hacerle click
+al tercero este cambie a color verde. -->
+
+<!DOCTYPE html>
+<html lang= "en">
+<head>
+ <title > Desafio 1 - para este usamos lo aprendido en el ejemplo 3 y 5 </title> <!-- tengo identificado qué ejemplo me sirve para cada desafio, así que procedemos a revisarlos nuevamente y a tomar el código, modificando donde corresponda -->
+</head>
+
+<body>
+<p id= "par-1"> 1 </p>
+<p id= "par-2" onclick="document.getElementById('par-4').style.color='blue'" > 2 </p>
+<p id= "par-3" onclick= "this.style.color='green'" > 3 </p>
+<p id= "par-4"> 4 </p>
+</body>
+</html>

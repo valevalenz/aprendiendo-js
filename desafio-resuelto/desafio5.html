@@ -1,0 +1,65 @@
+<!-- 5. Crea el archivo box-color-v2.html . Dentro de él agrega dos botones con la
+finalidad de modificar el tamaño de la caja principal, es decir, un botón para
+modificar la dimensión actual de la caja por el tamaño de 400x400 y otro botón para
+modificar la dimensión de la caja actual por el tamaño de 100x100. Los textos de los
+botones deben especificar la dimensión.
+
+** Deberás crear una segunda función debajo
+de la primera para lograrlo > esto se refiere a esta parte final:
+
+caja.style.width = valor; // cambia el width al 'valor' 400px o 100px dependiendo del caso
+caja.style.height = valor;
+
+-->
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <title> Desafio 5 - replicamos el ejemplo 9 </title>
+</head>
+<style>
+  #box {
+    width: 170px;
+    height: 170px;
+    background-color: red;
+  }
+</style>
+
+<body id="body">
+  <div id="box"></div>
+    <button id="cambiar400"> 400 x 400 </button>
+    <button id="cambiar100"> 100 x 100 </button>
+  <script>
+
+  // I. Definimos variables
+
+    //obtenemos el div de la caja con el ID BOX
+    var caja = document.getElementById("box");
+
+    //obtenemos el botón para cambiar a 400x400
+    var cuatrocientos = document.getElementById('cambiar400');
+
+    //obtenemos el botón para cambiar a 400x400
+    var cien = document.getElementById('cambiar100');
+
+//II. agregamos el eventlistener para cada botón y la acción click, que es el evento que queremos que "se escuche", junto con la declaración de la función
+
+    cuatrocientos.addEventListener('click', function() {
+      cambiar_porte("400px"); //400px es el parametro.  Como es un cuadrado podemos trabajar con el mismo parámetro para el ancho y el alto
+    });
+
+    cien.addEventListener('click', function() {
+      cambiar_porte("100px");
+    });
+
+//III. creamos la función
+
+    function cambiar_porte(valor) { //(valor) toma todo lo de arriba como un parametro.
+      caja.style.width = valor; // cambia el width al 'valor' 400px o 100px dependiendo del caso
+      caja.style.height = valor; // cambia el height al 'valor' 400px o 100px dependiendo del caso
+    };
+
+  </script>
+</body>
+
+</html>

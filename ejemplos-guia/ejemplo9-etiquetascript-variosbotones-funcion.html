@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <title>Con cada botón cambiamos a un color distinto</title>
+</head>
+
+<style>
+  #box {
+    width: 170px;
+    height: 170px;
+    background-color: red; /* el color inicial es rojo */
+  }
+</style>
+
+<body id="body">
+  <div id="box"></div>
+    <button id="green"> Verde </button>
+    <button id="yellow"> Amarillo </button>
+    <button id="red"> Rojo </button>
+
+  <script>
+
+//I. En primer lugar identificamos todos los elementos
+
+    //1. obtenemos el div caja con el ID BOX
+    var caja = document.getElementById("box");
+
+    //2. obtenemos el botón para el color verde con el ID green
+    var verde = document.getElementById('green');
+
+    //3. obtenemos el botón para el color amarillo con el ID yellow
+    var amarillo = document.getElementById('yellow');
+
+    //4. obtenemos el botón para el color rojo con el ID red
+    var rojo = document.getElementById('red');
+
+//II. agregamos el eventlistener para cada color y la acción click, que es el evento que queremos que "se escuche", junto con la declaración de la función
+
+    verde.addEventListener('click', function() {
+      cambiar_color("green"); //aquí aún no hace nada ya que estamos nombrando la función solamente
+    });
+
+    amarillo.addEventListener('click', function() {
+     cambiar_color("yellow");  //aquí aún no hace nada ya que estamos nombrando la función solamente
+    });
+
+     rojo.addEventListener('click', function() {
+      cambiar_color("red");  //aquí aún no hace nada ya que estamos nombrando la función solamente. "red", "yellow" y "green", funcionan como parámetros (colores, si cambio por ejemplo, "red" por "pink" el color será rosado al clickear)
+      });
+
+//III. Creamos la función. Este paso es distinto a los ejercicios anteriores y es gracias a esto que nos ahorramos escribir "box.style.backgroundColor = 'color'" repetidas veces ya que todos los botones hacen lo mismo, los trabajamos juntos.
+
+    function cambiar_color(color) { //(color) toma todo lo de arriba como parámetro
+     caja.style.backgroundColor = color; //aquí le decimos que le asigne el background color dependiente del botón que clickeamos
+    }
+
+  </script>
+</body>
+
+</html>

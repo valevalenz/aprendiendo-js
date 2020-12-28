@@ -1,0 +1,22 @@
+<!-- cambiando el color de un elemento distinto al que se clickea a través del ID. -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Selectores - click a un p para que cambie otro </title>
+</head>
+
+<body>
+  <p id="par-1" onclick="document.getElementById('par-2').style.color='red'"> 1 </p> <!-- En evento onclick se ubica en el p que queremos clickear-->
+   <p id="par-2" > 2 </p> <!--pero el id que usamos para la función es el del p que queremos cambiar de color. Existen distintos tipos de selectores, pero en este desafío solo trabajaremos con getElementById() -->
+  <p id="par-3"> 3 </p>
+  <p id="par-4"> 4 </p>
+</body>
+
+</html>
+
+<!-- Dato: También es posible ejecutar múltiples expresiones sobre un único elemento
+separándolos con ; .
+< p id= "par-1"
+onclick= "document.getElementById('par-2').style.color='red';
+console.log('hola')" > 1 </ p > -->

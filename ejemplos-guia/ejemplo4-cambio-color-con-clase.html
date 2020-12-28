@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <title> Añadiendo clases con JS para cambiar el estilo </title>
+  <style>
+    .warning {
+      color: red;
+      /* transition: all 800ms */
+    }
+  </style>
+
+</head>
+
+<body>
+  <p onclick="this.classList.add('warning')"> Solo Añadir </p>
+<!-- toggle se puede clickear y desclickear y alterna entre sacar y añadir el rojo -->
+  <p onclick="this.classList.toggle('warning')"> Toggle </p>
+</body>
+
+</html>
